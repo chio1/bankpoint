@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import os
 
 client = discord.Client()
 
@@ -12,6 +13,6 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-
-client.run('NTkyNjc1NjA0MzExMDQ4MjAy.XRD8wg.fZFG5TlXSOsleID_2Ax12GTdR8M')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
