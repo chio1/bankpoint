@@ -17,15 +17,15 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("!포인트주기"):
-        if str(message.content[6:12]) == "":
+        if str(message.content[7:12]) == "":
             await message.channel.send("<명령어> !포인트주기 (고유번호)")
         else:
-            author = message.content.startswith(str(message.content[6:12]))
+            author = message.content.startswith(str(message.content[7:12]))
             file = openpyxl.load_workbook("포인트.xlsx")
             sheet = file.active
             i = 1
             while True:
-                if sheet["A" + str(i)].value == str(message.content[6:12]):
+                if sheet["A" + str(i)].value == str(message.content[7:12]):
                     sheet["B" + str(i)].value = int(sheet["B" + str(i)].value) + 1
                     file.save("포인트.xlsx")
                     await message.channel.send("축하드립니다 진급포인트 1획득 ")
@@ -33,28 +33,28 @@ async def on_message(message):
 
                     break
                 if sheet["A" + str(i)].value == None:
-                    sheet["A" + str(i)].value = str(message.content[6:12])
+                    sheet["A" + str(i)].value = str(message.content[7:12])
                     sheet["B" + str(i)].value = 1
                     file.save("포인트.xlsx")
                     await message.channel.send("축하드립니다 진급포인트 1획득 ")
-                    await message.channel.send(str(message.content[6:12]) +"님의 누적 포인트 : " + str(sheet["B" + str(i)].value))
+                    await message.channel.send(str(message.content[7:12]) +"님의 누적 포인트 : " + str(sheet["B" + str(i)].value))
 
                     break
                 i += 1
     if message.content.startswith("!포인트확인"):
-        if str(message.content[6:12]) == "":
+        if str(message.content[7:12]) == "":
             await message.channel.send("<명령어> !포인트확인 (고유번호)")
         else:
-            author = message.content.startswith(str(message.content[6:12]))
+            author = message.content.startswith(str(message.content[6712]))
             file = openpyxl.load_workbook("포인트.xlsx")
             sheet = file.active
             i = 1
             while True:
                 if sheet["A" + str(i)].value == str(message.content[7:12]):
-                    await message.channel.send(str(message.content[6:12]) +"님의 누적 포인트 : " + str(sheet["B" + str(i)].value))
+                    await message.channel.send(str(message.content[7:12]) +"님의 누적 포인트 : " + str(sheet["B" + str(i)].value))
                     break
                 else:
-                    await message.channel.send(str(message.content[6:12]) + "님의 누적 포인트 : 0 " )
+                    await message.channel.send(str(message.content[7:12]) + "님의 누적 포인트 : 0 " )
                     break
 
 access_token = os.environ["BOT_TOKEN"]
