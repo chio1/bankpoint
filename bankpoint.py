@@ -20,7 +20,7 @@ async def on_message(message):
     owner_chio = "267558400861143040"
     owner_anjihyeon = "364336734323867648"
     if message.content.startswith("!포인트주기"):
-        if str(message.author.id) ==  owner_carpe and owner_chio and owner_anjihyeon:
+        if str(message.author.id) ==  "333910993216208896" and "267558400861143040" and "364336734323867648":
             if str(message.content[7:]) == "":
                 await message.channel.send(embed =discord.Embed(title="AskaBank BOT", description="<명령어> !포인트주기 (고유번호)" , color=0x00ff00))
             else:
@@ -59,7 +59,7 @@ async def on_message(message):
                     await message.channel.send(embed =discord.Embed(title="AskaBank BOT", description=str(message.content[7:]) + "님의 누적 포인트 : 0 ",color=0x00ff00) )
                     break
     if message.content.startswith("!포인트뺏기"):
-        if str(message.author.id) ==  owner_carpe and owner_chio and owner_anjihyeon:
+        if str(message.author.id) ==  "333910993216208896" and "267558400861143040" and "364336734323867648":
             if str(message.content[7:]) == "":
                 await message.channel.send(embed =discord.Embed(title="AskaBank BOT", description="<명령어> !포인트뺏기 (고유번호)" , color=0x00ff00))
             else:
