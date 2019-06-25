@@ -161,5 +161,5 @@ async def on_message(message):
 
         else:
             await message.channel.send(embed=discord.Embed(title="AskaBank BOT", description="사용불가", color=0x00ff00))
-client.run('NTkyNjc1NjA0MzExMDQ4MjAy.XRIZuQ.uODvYvLGelvL612MomZY5b0uoOs')
-
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
