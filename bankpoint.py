@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import openpyxl
+import os
 
 client = discord.Client()
 
