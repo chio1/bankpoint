@@ -1,1 +1,1 @@
-worker: python bankpoint1.py
+worker: python bankpoint.py
