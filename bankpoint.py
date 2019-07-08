@@ -164,6 +164,6 @@ async def on_message(message):
     if message.content.startswith("!명령어"):
         await message.channel.send(embed=discord.Embed(title="명령어", description= "\n***<직원>***\n ```!포인트확인``` \n\n\n***<이사회>(직원사용불가)***\n```!포인트주기\n!포인트뺏기```", color=0x00ff00))
 
-client.run('NTkyNjc1NjA0MzExMDQ4MjAy.XRNBNw.CEWTffp3RZY6Z6lHaebINSx-29s')
+
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
